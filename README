@@ -1,2 +1,25 @@
-this is a simple websocket demo write with php
-you can run this demo by running websocket server with command 'php -f server.php' and then visit the client.html in browser(the browser must support websocket, ex:chrome, ie10)
+phpwebsocket实现的一个简单聊天室。
+ 
+ 浏览器支持：chrome，firefox，（chrome 22.0.1229.79测试完美运行）
+ 支持websocket 10+版本。目前chrome等浏览器大部分采用新版本协议。
+ 
+ websocket的协议的请求头：
+   
+   GET ws://localhost:12345/websocket/test.php HTTP/1.1
+   Origin: http://localhost
+   Connection: Upgrade
+   Host: localhost:12345
+   Sec-WebSocket-Key: JspZdPxs9MrWCt3j6h7KdQ==
+   Upgrade: websocket Sec-WebSocket-Version: 13
+   
+   websocket的响应头：
+   
+   HTTP/1.1 101 Web Socket Protocol Handshake
+   WebSocket-Location: ws://localhost:12345/websocket/test.php
+   Connection: Upgrade
+   Upgrade: websocket
+   Sec-WebSocket-Accept: zUyzbJdkVJjhhu8KiAUCDmHtY/o=
+   WebSocket-Origin: http://localhost
+ 
+ 
+ =============
